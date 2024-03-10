@@ -1,30 +1,37 @@
 let playerScore = 0;
 let computerScore = 0;
 
-function getComputerChoice() {
+function computerRand() {
     let randomNum = Math.floor (Math.random() * 3); {
     }
     switch (randomNum) {
         case 0:
-        return "rock";
+            return "rock";
         case 1:
-        return "paper";
+            return "paper";
         case 2:
-        return "scissors";
+            return "scissors";
     }
 }
-function getPlayerChoice() {
-    let playerInput = prompt("rock paper scissors");
-    playerInput.toLowerCase;
-    if (playerInput === "rock" || playerInput === "paper" || playerInput === "scissors") {
-    return playerInput;
+
+let playerChoice = document.querySelector('#container');
+
+playerChoice.addEventListener('click', (e) => {
+    let target = e.target;
+
+    switch(target.id) {
+        case 'rock':
+            console.log('Rock was clicked');
+            break;
+        case 'paper':
+            console.log('Paper was clicked');
+            break;
+        case 'scissors':
+            console.log('Scissors was clicked');
     }
-    else {
-    alert("wrong, try again");
-    getPlayerChoice();
-    }
-}
-function playRound() {
+});
+
+/* function playRound() {
     let computerSelection = getComputerChoice()
     let playerSelection = getPlayerChoice()
     console.log(`You chose ${playerSelection}.`)
@@ -72,4 +79,4 @@ if (computerScore = 5) {
     alert("You lost! Refresh to play again.")
 } else if (playerScore = 5) {
     alert("You won! Refresh to play again.")
-}
+} */
