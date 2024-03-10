@@ -28,6 +28,7 @@ playerChoice.addEventListener('click', (e) => {
             break;
         case 'scissors':
             console.log('Scissors was clicked');
+            break;
     }
 });
 
