@@ -70,6 +70,12 @@ function playRound(playerSelection) {
         }
     }
 
+    if (playerScore === 5) {
+        fourthPara.textContent = "You won the game! Refresh the page to play again.";
+    } else if (computerScore === 5) {
+        fourthPara.textContent = "You lost the game! Refresh the page to play again.";
+    }
+
     thirdPara.textContent = `Player score: ${playerScore} Computer Score: ${computerScore}`;
 
 }
