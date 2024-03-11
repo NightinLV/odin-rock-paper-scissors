@@ -21,63 +21,55 @@ buttons.addEventListener('click', (event) => {
 
     switch(target.id) {
         case 'rock':
-            console.log('Rock was clicked');
+            playRound(rock);
             break;
         case 'paper':
-            console.log('Paper was clicked');
+            playRound(paper);
             break;
         case 'scissors':
-            console.log('Scissors was clicked');
+            playRound(scissors);
             break;
     }
 });
 
-/* function playRound() {
-    let computerSelection = getComputerChoice()
-    let playerSelection = getPlayerChoice()
-    console.log(`You chose ${playerSelection}.`)
-    console.log(`The computer chose ${computerSelection}.`)
+let para = document.querySelector('#para');
+let secondPara = document.querySelector('#secondPara');
+
+function playRound(playerSelection) {
+    let computerSelection = computerChoice();
+    para.textContent = `You chose ${playerSelection.value}, the computer chose ${computerSelection}.`;
+    
     if (playerSelection === computerSelection) {
-        return "You tied!";
+        secondPara.textContent = "You tied!";
     }
     else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
             computerScore++;
-        return "You lost, paper beats rock!";
+        secondPara.textContent = "You lost, paper beats rock!";
         }
         else {
             playerScore++;
-            return "You won, rock beats scissors!";
+            secondPara.textContent = "You won, rock beats scissors!";
         }
     }
     else if (playerSelection === "paper") {
         if (computerSelection === "scissors") {
             computerScore++;
-            return "You lost, scissors beats paper!";
+            secondPara.textContent = "You lost, scissors beats paper!";
         }
         else {
             playerScore++;
-            return "You won, paper beats rock!";
+            secondPara.textContent = "You won, paper beats rock!";
         }
     }
     else if (playerSelection === "scissors") {
             if (computerSelection === "rock") {
                 computerScore++;
-                return "You lost, rock beats scissors!";
+                secondPara.textContent = "You lost, rock beats scissors!";
             }
             else {
                 playerScore++;
-                return "You won, scissors beats paper!";
+                secondPara.textContent = "You won, scissors beats paper!";
             }
         } 
     }
-do {
-    console.log(playRound());
-    console.log(`Computer: ${computerScore}, You: ${playerScore}`)
-} while (computerScore < 5 && playerScore < 5);
-
-if (computerScore = 5) {
-    alert("You lost! Refresh to play again.")
-} else if (playerScore = 5) {
-    alert("You won! Refresh to play again.")
-} */
