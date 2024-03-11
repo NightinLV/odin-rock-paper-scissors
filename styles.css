@@ -15,3 +15,8 @@ button {
     cursor: pointer;
     outline: inherit;
 }
+
+.computer-buttons {
+    box-sizing: border-box;
+    border: black solid 10px;
+}
