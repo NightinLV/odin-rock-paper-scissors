@@ -34,42 +34,42 @@ buttons.addEventListener('click', (event) => {
 
 let para = document.querySelector('#para');
 let secondPara = document.querySelector('#secondPara');
+let thirdPara = document.querySelector('#thirdPara')
 
 function playRound(playerSelection) {
+    playerSelection.value.toString();
     let computerSelection = computerChoice();
     para.textContent = `You chose ${playerSelection.value}, the computer chose ${computerSelection}.`;
     
-    if (playerSelection === computerSelection) {
-        secondPara.textContent = "You tied!";
-    }
-    else if (playerSelection === "rock") {
+    if (playerSelection.value === computerSelection) {
+       secondPara.textContent = "You tied!"
+    } else if (playerSelection.value === "rock") {
         if (computerSelection === "paper") {
+            secondPara.textContent = "You lost, paper beats rock!";
             computerScore++;
-        secondPara.textContent = "You lost, paper beats rock!";
-        }
-        else {
-            playerScore++;
+            } else {
             secondPara.textContent = "You won, rock beats scissors!";
-        }
-    }
-    else if (playerSelection === "paper") {
-        if (computerSelection === "scissors") {
-            computerScore++;
-            secondPara.textContent = "You lost, scissors beats paper!";
-        }
-        else {
             playerScore++;
+        }
+
+    } else if (playerSelection.value === "paper") {
+        if (computerSelection === "scissors") {
+            secondPara.textContent = "You lost, scissors beats paper!";
+            computerScore++;
+        } else {
             secondPara.textContent = "You won, paper beats rock!";
+            playerScore++;
+        }
+    } else if (playerSelection.value === "scissors") {
+        if (computerSelection === "rock") {
+            secondPara.textContent = "You lost, rock beats scissors!";
+            computerScore++;
+        } else {
+            secondPara.textContent = "You won, paper beats rock!";
+            playerScore++;
         }
     }
-    else if (playerSelection === "scissors") {
-            if (computerSelection === "rock") {
-                computerScore++;
-                secondPara.textContent = "You lost, rock beats scissors!";
-            }
-            else {
-                playerScore++;
-                secondPara.textContent = "You won, scissors beats paper!";
-            }
-        } 
-    }
+
+    thirdPara.textContent = `Player score: ${playerScore} Computer Score: ${computerScore}`;
+
+}
