@@ -1,7 +1,7 @@
 let playerScore = 0;
-let computerScore = 0;
+let computerScore = 0; 
 
-function computerRand() {
+function computerChoice() {
     let randomNum = Math.floor (Math.random() * 3); {
     }
     switch (randomNum) {
@@ -14,10 +14,10 @@ function computerRand() {
     }
 }
 
-let playerChoice = document.querySelector('#container');
+let buttons = document.querySelector('#container');
 
-playerChoice.addEventListener('click', (e) => {
-    let target = e.target;
+buttons.addEventListener('click', (event) => {
+    let target = event.target;
 
     switch(target.id) {
         case 'rock':
