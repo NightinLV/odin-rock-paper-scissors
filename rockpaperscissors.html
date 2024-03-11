@@ -9,9 +9,10 @@
 </head>
 <body>
     <h1>Rock Paper Scissors</h1>
+    <p id="para">Click the buttons to start the game!</p>
 <div id="global-container">
     <div id="player-container">
-        <h3>You:</h3>
+        <h3>You: <span id="playerScore"></span></h3>
         <div id="player-buttons-container">
             <button value="rock"><img src="./images/rock-icon.png" width="200px" height="200px" placeholder="Rock button"></button>
             <button value="paper"><img src="./images/paper-icon.png" width="200px" height="200px" placeholder="Paper button"></button>
@@ -19,19 +20,13 @@
         </div>
     </div>
     <div id="computer-container">
-        <h3>Computer:</h3>
+        <h3>Computer: <span id="computerScore"></span></h3>
         <div id="computer-buttons-container">
             <span><img class="computer-buttons" src="./images/robo-rock-icon.png" id="computer-rock" value="rock" width="220px" height="225px" placeholder="Computer Rock icon"></span>
             <span><img class="computer-buttons" src="./images/robo-paper-icon.png" id="computer-paper" value="paper" width="220px" height="225px" placeholder="Computer Paper icon"></span>
             <span><img class="computer-buttons" src="./images/robo-scissors-icon.png" id="computer-scissors" value="scissors" width="220px" height="225px" placeholder="Computer Scissors icon"></span>
         </div>
     </div> 
-</div>
-<div id="lower-container">
-    <p id="para"></p>
-    <p id="secondPara"></p>
-    <p id="thirdPara">Player score: Computer Score: </p>
-    <p id="fourthPara"></p>
 </div>
 </body>
 </html>

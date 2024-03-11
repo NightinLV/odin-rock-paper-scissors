@@ -69,6 +69,10 @@ button:hover {
     background-color: #c58c27;
 }
 
-#lower-container {
+p {
     text-align: center;
+    background-color: #9c762f;
+    padding: 30px;
+    font-size: 35px;;
+    margin: 0px;
 }
