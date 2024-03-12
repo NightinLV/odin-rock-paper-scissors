@@ -50,18 +50,20 @@ function playRound(playerSelection) {
     let computerSelection = computerChoice();
     
     if (playerSelection === computerSelection) {
-       para.textContent = "You tied!"
+        para.textContent = "You tied!"
     } else if (playerSelection === "rock") {
         if (computerSelection === "paper") {
             computerScore++;
             computerScoreDisplay.textContent = `${computerScore}`;
             computerButtons[1].setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             buttons.item(0).setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You lost this hand! Paper beats rock!"
             } else {
             playerScore++;
             playerScoreDisplay.textContent = `${playerScore}`;
             buttons.item(0).setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             computerButtons[2].setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You won this hand! Rock beats scissors!"
         }
 
     } else if (playerSelection === "paper") {
@@ -70,11 +72,13 @@ function playRound(playerSelection) {
             computerScoreDisplay.textContent = `${computerScore}`;
             computerButtons[2].setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             buttons.item(1).setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You lost this hand! Scissors beat paper!"
         } else {
             playerScore++;
             playerScoreDisplay.textContent = `${playerScore}`;
             buttons.item(1).setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             computerButtons[0].setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You won this hand! Paper beats rock!"
         }
     } else if (playerSelection === "scissors") {
         if (computerSelection === "rock") {
@@ -82,11 +86,13 @@ function playRound(playerSelection) {
             computerScoreDisplay.textContent = `${computerScore}`;
             computerButtons[0].setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             buttons.item(2).setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You lost this hand! Rock beats scissors!"
         } else {
             playerScore++;
             playerScoreDisplay.textContent = `${playerScore}`;
             buttons.item(2).setAttribute("style", "border: #65ff17 solid 10px; background-color: #00ce22");
             computerButtons[1].setAttribute("style", "border: #7f0018 solid 10px; background-color: #ff0000");
+            para.textContent = "You won this hand! Scissors beats paper!"
         }
     }
 
