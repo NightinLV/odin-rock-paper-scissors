@@ -2,7 +2,7 @@ let playerScore = 0;
 let computerScore = 0; 
 
 function computerChoice() {
-    let randomNum = Math.floor (Math.random() * 3); {
+    let randomNum = Math.floor(Math.random() * 3); {
     }
     switch (randomNum) {
         case 0:
